@@ -64,6 +64,9 @@ export default {
   position: absolute;
   bottom: 100;
 }
+.VueCarousel-dot-container {
+  z-index: 100;
+}
  .hero {
    background-color: #36393F;
    position: relative;
@@ -74,7 +77,6 @@ export default {
       left: 0;
       bottom: 0;
       right: 0;
-      background-color: rgba(0, 0 ,0, .3);
       display: flex;
       justify-content: center;
       align-items: center;
