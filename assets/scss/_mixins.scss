@@ -1,0 +1,7 @@
+$mq-sp-width: 640px;
+
+@mixin pc ($min-width: $mq-sp-width) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }
+}
