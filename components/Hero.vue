@@ -12,7 +12,7 @@
         :speed="1200"
         :navigation-enabled="true"
         :pagination-size="20"
-        :pagination-color="DFE0E1"
+        :pagination-color="ffffff"
       >
         <slide><img src="@/assets/images/hero-1.jpg" class="hero__img hero__img-1" alt="hero-1"></slide>
         <slide><img src="@/assets/images/hero-2.jpg" class="hero__img hero__img-2" alt="hero-2"></slide>
@@ -42,6 +42,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.VueCarousel {
+  position: relative;
+}
 .VueCarousel-slide {
   background: #36393F;
   display: flex;
@@ -49,6 +52,17 @@ export default {
   justify-content: center;
   border-right: 1px solid #fff;
   box-sizing: border-box;
+}
+.VueCarousel-navigation-button {
+  position: absolute;
+}
+.VueCarousel-navigation-next{
+  margin-left: 20px;
+}
+.VueCarousel-pagination {
+  z-index: 100;
+  position: absolute;
+  bottom: 100;
 }
  .hero {
    background-color: #36393F;
@@ -65,10 +79,10 @@ export default {
       justify-content: center;
       align-items: center;
       .heading {
-        font-size: 48px;
+        font-size: 60px;
         color: #ffffff;
         text-align: center;
-        padding: 20%;
+        padding: 10%;
       }
    }
    .carousel {
