@@ -36,7 +36,7 @@ export default {
 
 <style lang="scss" scoped>
 .VueCarousel-slide {
-    background: #fff;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
