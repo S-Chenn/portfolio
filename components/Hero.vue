@@ -58,6 +58,7 @@ export default {
 }
 .VueCarousel-navigation-next{
   margin-left: 20px;
+  right:100px;
 }
 .VueCarousel-pagination {
   z-index: 100;
