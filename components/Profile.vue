@@ -1,7 +1,7 @@
 <template>
   <section class="profile-section">
     <div class="container">
-      <CardProfile :icon="src" name="Chen Zhenyi">
+      <CardProfile :image_url="src" name="Chen Zhenyi">
         <p class="introduction">
           フロントエンドエンジニア(自称)をやっています。前職は無職、部活は帰宅部のエリートニート街道を歩んでおりました。
         </p>
