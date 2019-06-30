@@ -12,7 +12,7 @@
 
 <script>
 import CardProfile from '@/components/CardProfile.vue'
-import src from '@/assets/images/adam.jpg'
+import src from '~/assets/images/adam.jpg'
 export default {
   components: {
     CardProfile

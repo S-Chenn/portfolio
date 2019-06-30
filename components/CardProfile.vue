@@ -7,7 +7,7 @@
       プロフィール
     </p>
     <div class="wrap-btm">
-      <img :src="icon" alt="" class="profile__icon">
+      <img src="@/assets/images/adam.jpg" alt="" class="profile__icon">
       <div class="profile__text">
         <h3 class="profile__name">
           {{ name }}
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  props: ['icon', 'name']
+  props: ['image_url', 'name']
 }
 </script>
 <style lang="scss" scoped>
@@ -56,8 +56,8 @@ export default {
       align-items: center;
     }
     &__icon {
-      width: 80px;
-      height: 80px;
+      width: 104px;
+      height: 104px;
       border-radius: 50%;
     }
     &__text {
