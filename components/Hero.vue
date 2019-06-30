@@ -7,12 +7,13 @@
         :per-page="1"
         :autoplay="true"
         :loop="true"
-        :pagination-padding="20"
         :autoplay-timeout="5000"
         :speed="1200"
-        :navigation-enabled="true"
-        :pagination-size="20"
-        :pagination-color="ffffff"
+        :navigation-enabled="false"
+        :pagination-size="10"
+        :pagination-padding="0"
+        pagination-active-color="rgba(255, 255, 255, 0.7)"
+        pagination-color="transparent"
       >
         <slide><img src="@/assets/images/hero-1.jpg" class="hero__img hero__img-1" alt="hero-1"></slide>
         <slide><img src="@/assets/images/hero-2.jpg" class="hero__img hero__img-2" alt="hero-2"></slide>
@@ -53,27 +54,29 @@ export default {
   border-right: 1px solid #fff;
   box-sizing: border-box;
 }
-.VueCarousel-navigation-button {
-  position: absolute;
+/deep/ .VueCarousel-dot {
+  padding: 5%;
+  background-color: transparent;
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  margin: 2%;
 }
-.VueCarousel-navigation-next{
-  margin-left: 20px;
-  right:100px;
+
+/deep/ .VueCarousel-dot-container {
+  width: 100%;
 }
-.VueCarousel-pagination {
+
+/deep/ .VueCarousel-pagination {
   z-index: 100;
   position: absolute;
-  bottom: 100;
-}
-.VueCarousel-dot-container {
-  z-index: 100;
+  bottom: 10%;
 }
  .hero {
    background-color: #36393F;
    position: relative;
    width: 100%;
    .heading-wrap {
-      position: absolute;
+     background-color: rgba(0, 0, 0, 0.3);
+     position: absolute;
       top: 0;
       left: 0;
       bottom: 0;
@@ -83,9 +86,9 @@ export default {
       align-items: center;
       .heading {
         font-size: 60px;
-        color: #ffffff;
+        color: rgba(255, 255, 255, 0.7);
         text-align: center;
-        padding: 10%;
+        padding: auto;
       }
    }
    .carousel {
