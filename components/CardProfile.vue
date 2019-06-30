@@ -56,17 +56,19 @@ export default {
       align-items: center;
     }
     &__icon {
-      width: 104px;
-      height: 104px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
     }
     &__text {
       display: flex;
       justify-content: center;
       align-items: left;
+      align-self: flex-start;
       flex-direction: column;
       text-align: left;
       margin-left: 20px;
+      width: 60%;
     }
     &__name {
       font-size: 30px;

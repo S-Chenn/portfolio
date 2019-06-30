@@ -4,6 +4,7 @@
       <CardProfile :image_url="src" name="Chen Zhenyi">
         <p class="introduction">
           フロントエンドエンジニア(自称)をやっています。前職は無職、部活は帰宅部のエリートニート街道を歩んでおりました。
+          南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏
         </p>
       </CardProfile>
     </div>
@@ -31,8 +32,9 @@ export default {
     align-items: center;
     flex-direction: column;
     padding: 40px 0;
-    .introduction{
+    .introduction {
       font-size: 10px;
+      line-height: 2.0;
     }
   }
 
