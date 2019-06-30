@@ -85,10 +85,10 @@ export default {
       justify-content: center;
       align-items: center;
       .heading {
-        font-size: 36px;
+        font-size: 1.4em;
         color: rgba(255, 255, 255, 0.7);
         text-align: center;
-        padding: auto;
+        padding: 0 16px;
       }
    }
 
@@ -98,8 +98,14 @@ export default {
  }
 
  @include pc(){
-   .heading {
-     font-size: 60px;
+   .hero {
+     .heading-wrap {
+       .heading {
+         font-size: 60px;
+         line-height: 1.2;
+         padding: auto;
+       }
+     }
    }
  }
 </style>
