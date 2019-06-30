@@ -1,20 +1,25 @@
 <template>
   <section class="profile-section">
     <div class="container">
-      <CardProfile image="image_src" name="Chen Zhenyi" desc="うんこぶりぶりぶりゅりゅりゅりゅりゅりゅりゅりゅりゅりゅりゅりゅりゅりゅりゅりゅりゅ" />
+      <CardProfile :icon="src" name="Chen Zhenyi">
+        <p class="introduction">
+          フロントエンドエンジニア(自称)をやっています。前職は無職、部活は帰宅部のエリートニート街道を歩んでおりました。
+        </p>
+      </CardProfile>
     </div>
   </section>
 </template>
 
 <script>
 import CardProfile from '@/components/CardProfile.vue'
+import src from '@/assets/images/adam.jpg'
 export default {
   components: {
     CardProfile
   },
   data() {
     return {
-      image_src: require('@/assets/images/adam.jpg')
+      icon: src
     }
   }
 }
@@ -25,6 +30,15 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 1000px;
+    padding: 40px 0;
+    .introduction{
+      font-size: 10px;
+    }
   }
+
+@include pc() {
+  .profile-section {
+    padding: 80px 0;
+  }
+}
 </style>

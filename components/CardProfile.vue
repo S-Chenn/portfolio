@@ -7,14 +7,12 @@
       プロフィール
     </p>
     <div class="wrap-btm">
-      <img :src="image" alt="" class="profile__icon">
+      <img :src="icon" alt="" class="profile__icon">
       <div class="profile__text">
         <h3 class="profile__name">
           {{ name }}
         </h3>
-        <p class="profile__description">
-          {{ desc }}
-        </p>
+        <slot />
       </div>
     </div>
   </div>
@@ -22,7 +20,7 @@
 
 <script>
 export default {
-  props: ['image', 'name', 'desc']
+  props: ['icon', 'name']
 }
 </script>
 <style lang="scss" scoped>
