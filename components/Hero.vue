@@ -85,17 +85,21 @@ export default {
       justify-content: center;
       align-items: center;
       .heading {
-        font-size: 60px;
+        font-size: 36px;
         color: rgba(255, 255, 255, 0.7);
         text-align: center;
         padding: auto;
       }
    }
-   .carousel {
-   }
 
    &__img {
      width: 100%;
+   }
+ }
+
+ @include pc(){
+   .heading {
+     font-size: 60px;
    }
  }
 </style>
