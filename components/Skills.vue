@@ -64,13 +64,22 @@ export default {
   }
   .grid {
     display: grid;
-    gap: 24px;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .card {
+  max-width: 320px;
   &__icon {
     height: 80px;
+  }
+}
+@include pc(){
+  .skills {
+    .grid {
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 </style>
