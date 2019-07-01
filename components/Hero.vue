@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section id="top" class="hero">
     <no-ssr>
       <carousel
         class="carousel"
