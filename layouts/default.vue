@@ -66,7 +66,18 @@ export default {
   z-index: 20;
 }
 @include pc (){
+  .header {
+    transform: none;
+    transition: none;
+  }
+  .footer {
+    transform: none;
+    transition: none;
+  }
   .hamburger-menu {
+    display: none;
+  }
+  .jsDrawerMask{
     display: none;
   }
 }
