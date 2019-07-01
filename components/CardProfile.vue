@@ -59,6 +59,7 @@ export default {
       width: 160px;
       height: 160px;
       border-radius: 50%;
+      flex-shrink: 0;
     }
     &__text {
       display: flex;
