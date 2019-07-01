@@ -13,3 +13,11 @@ img {
   max-width: 100%;
   vertical-align: bottom;
 }
+
+.section:nth-child(odd) {
+  background: #fff;
+}
+
+.section:nth-child(even) {
+  background: rgb(234, 241, 255);
+}
