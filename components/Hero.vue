@@ -66,7 +66,7 @@ export default {
 }
 
 /deep/ .VueCarousel-pagination {
-  z-index: 100;
+  z-index: 10;
   position: absolute;
   bottom: 10%;
 }
