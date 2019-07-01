@@ -41,7 +41,7 @@ export default {
       position: relative;
       font-size: 12px;
       color: #ABABAB;
-      margin-bottom: 80px;
+      margin-bottom: 52px;
       &::after{
         position: absolute;
         width: 110%;
@@ -82,62 +82,23 @@ export default {
   }
 @include pc() {
   .profile {
-    max-width: 600px;
-    padding: 10px 20px 20px 20px;
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    &__title {
-      font-size: 36px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    &__ruby {
-      position: relative;
-      font-size: 12px;
-      color: #ABABAB;
-      margin-bottom: 80px;
-      &::after{
-        position: absolute;
-        width: 110%;
-        content:"";
-        bottom: -20px;
-        border-bottom: 4px solid #000;
-      }
-    }
     .wrap-btm {
-      display: flex;
       flex-direction: row;
-      justify-content: center;
-      align-items: center;
     }
     &__icon {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      flex-shrink: 0;
       margin: 0;
     }
+    &__ruby {
+      margin-bottom: 80px;
+    }
     &__text {
-      display: flex;
-      justify-content: center;
       align-items: left;
       align-self: flex-start;
-      flex-direction: column;
-      text-align: left;
       margin-left: 20px;
       width: 60%;
     }
     &__name {
-      font-size: 30px;
-      font-weight: 600;
-      margin-bottom: 20px;
       align-self: flex-start;
-    }
-    &__description {
-      font-size: 10px;
     }
   }
 }
