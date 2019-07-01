@@ -1,5 +1,5 @@
 <template>
-  <section id="profile" class="profile-section">
+  <section id="profile" class="profile-section section">
     <div class="container">
       <CardProfile :image_url="src" name="Chen Zhenyi">
         <p class="introduction">
