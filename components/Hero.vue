@@ -86,7 +86,7 @@ export default {
       align-items: center;
       .heading {
         font-size: 1.4em;
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.85);
         text-align: center;
         padding: 0 16px;
       }
