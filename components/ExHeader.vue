@@ -1,11 +1,27 @@
 <template>
   <header class="header">
-    <div class="header__logo">Portfolio</div>
+    <div class="header__logo">
+      <nuxt-link to="#top" class="header__logo-link">
+        Potofolio
+      </nuxt-link>
+    </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
-        <li class="header__nav-item">Profile</li>
-        <li class="header__nav-item">Skills</li>
-        <li class="header__nav-item">Contact</li>
+        <li class="header__nav-item">
+          <nuxt-link to="#profile" class="header__nav-link">
+            Profile
+          </nuxt-link>
+        </li>
+        <li class="header__nav-item">
+          <nuxt-link to="#skills" class="header__nav-link">
+            Skills
+          </nuxt-link>
+        </li>
+        <li class="header__nav-item">
+          <nuxt-link to="#contact" class="header__nav-link">
+            Contact
+          </nuxt-link>
+        </li>
       </ul>
     </nav>
   </header>
@@ -56,6 +72,14 @@ export default {
       &:hover::before {
         opacity: 1;
       }
+    }
+    &__nav-link {
+      color: #fff;
+      text-decoration: none;
+    }
+    &__logo-link {
+      color: #fff;
+      text-decoration: none;
     }
   }
 </style>
