@@ -52,6 +52,7 @@ export default {
     }
     .wrap-btm {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
@@ -60,6 +61,64 @@ export default {
       height: 160px;
       border-radius: 50%;
       flex-shrink: 0;
+      margin-bottom: 32px;
+    }
+    &__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: left;
+      width: 100%;
+    }
+    &__name {
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    &__description {
+      font-size: 10px;
+    }
+  }
+@include pc() {
+  .profile {
+    max-width: 600px;
+    padding: 10px 20px 20px 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__title {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    &__ruby {
+      position: relative;
+      font-size: 12px;
+      color: #ABABAB;
+      margin-bottom: 80px;
+      &::after{
+        position: absolute;
+        width: 110%;
+        content:"";
+        bottom: -20px;
+        border-bottom: 4px solid #000;
+      }
+    }
+    .wrap-btm {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    &__icon {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin: 0;
     }
     &__text {
       display: flex;
@@ -75,9 +134,11 @@ export default {
       font-size: 30px;
       font-weight: 600;
       margin-bottom: 20px;
+      align-self: flex-start;
     }
     &__description {
       font-size: 10px;
     }
   }
+}
 </style>
