@@ -1,7 +1,7 @@
 <template>
   <section id="skills" class="skills section">
     <div class="container">
-      <Heading class="skills__heading" title="Skills" ruby="スキル" />
+      <Heading class="skills__heading" title="My Skills" ruby="スキル" />
       <div class="grid">
         <skill-card class="card" title="HTML/CSS" description="HTML/CSSを正しく設計することができます。">
           <img class="card__icon" src="~@/assets/images/materials/website.svg" alt="HTML/CSS">

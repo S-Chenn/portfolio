@@ -1,7 +1,7 @@
 <template>
   <div class="profile">
     <h2 class="profile__title">
-      PROFILE
+      Profile
     </h2>
     <p class="profile__ruby">
       プロフィール
