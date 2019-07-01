@@ -88,7 +88,7 @@ export default {
     .header{
     width: 100%;
     height: 80px;
-    background-color: rgba(0, 0, 54, 0.6);
+    background-color: rgba(0, 0, 54, 0.80);
     flex-direction: row;
     color: #fff;
     align-items: center;
