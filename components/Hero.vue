@@ -85,7 +85,7 @@ export default {
       justify-content: center;
       align-items: center;
       .heading {
-        font-size: 1.4em;
+        font-size: 1.5em;
         color: rgba(255, 255, 255, 0.85);
         text-align: center;
         padding: 0 16px;
