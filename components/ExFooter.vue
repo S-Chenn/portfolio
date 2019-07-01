@@ -28,17 +28,62 @@ export default {
 </script>
 <style lang="scss" scoped>
 .footer {
+  position: fixed;
+  z-index: 110;
+  bottom: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 32px;
-  background-color: #FAFAFA;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 8px 32px;
+  background-color: #dddddd;
+  height: 40%;
+  width: 60%;
   .footer-nav {
     display: flex;
     justify-content: center;
     align-items: center;
     &__list {
       display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: -8px;
+    }
+    &__item {
+      padding: 8px;
+    }
+    &__link {
+      font-size: 16px;
+      color: #777777;
+      text-decoration: none;
+    }
+  }
+  &__copyright {
+    color: #999999;
+    font-size: 12px;
+    align-self: flex-end;
+  }
+}
+
+@include pc() {
+.footer {
+  position: initial;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #FAFAFA;
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &__list {
+      display: flex;
+      flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
       padding: -16px;
@@ -55,6 +100,7 @@ export default {
   &__copyright {
     color: #999999;
     font-size: 12px;
+    align-self: center;
   }
 }
 
@@ -62,5 +108,6 @@ export default {
   content: "|";
   color: #777777;
   margin: 0 40px;
+}
 }
 </style>
