@@ -30,8 +30,6 @@ export default {
   color: #de3f3f;
   margin-left: 3px;
 }
-.contact{
-}
 .wrap-form {
   max-width: 560px;
   width: 100%;
