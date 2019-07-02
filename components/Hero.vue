@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section id="top" class="hero">
     <no-ssr>
       <carousel
         class="carousel"
@@ -66,7 +66,7 @@ export default {
 }
 
 /deep/ .VueCarousel-pagination {
-  z-index: 100;
+  z-index: 10;
   position: absolute;
   bottom: 10%;
 }
@@ -74,6 +74,7 @@ export default {
    background-color: #36393F;
    position: relative;
    width: 100%;
+   min-height: 320px;
    .heading-wrap {
      background-color: rgba(0, 0, 0, 0.3);
      position: absolute;
@@ -85,17 +86,34 @@ export default {
       justify-content: center;
       align-items: center;
       .heading {
-        font-size: 60px;
-        color: rgba(255, 255, 255, 0.7);
+        font-size: 2em;
+        color: rgba(255, 255, 255, 0.85);
         text-align: center;
-        padding: auto;
+        padding: 0 16px;
+        margin-bottom: 16px;
+        line-height: 1.2;
       }
-   }
-   .carousel {
    }
 
    &__img {
+     object-fit: cover;
+     min-height: 320px;
      width: 100%;
+   }
+ }
+
+ @include pc(){
+   .hero {
+     .heading-wrap {
+       .heading {
+         font-size: 60px;
+         line-height: 1.2;
+         padding: auto;
+       }
+     }
+     &__image {
+       object-fit: none;
+     }
    }
  }
 </style>

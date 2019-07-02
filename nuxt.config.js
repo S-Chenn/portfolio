@@ -29,7 +29,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/vue-carousel', ssr: false }
+    { src: '~/plugins/vue-carousel', ssr: false },
+    { src: '~/plugins/vue-scrollto', ssr: false }
   ],
   /*
   ** Nuxt.js modules
@@ -42,7 +43,10 @@ export default {
   ],
   styleResources: {
     sass: [
-      '~/assets/scss/variable.scss'
+      '@/assets/scss/_reset.scss',
+      '@/assets/scss/_variables.scss',
+      '@/assets/scss/_mixins.scss',
+      '@/assets/scss/_base.scss'
     ]
   },
   /*

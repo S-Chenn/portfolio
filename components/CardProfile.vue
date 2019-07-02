@@ -1,20 +1,18 @@
 <template>
   <div class="profile">
     <h2 class="profile__title">
-      PROFILE
+      Profile
     </h2>
     <p class="profile__ruby">
       プロフィール
     </p>
     <div class="wrap-btm">
-      <img :src="image" alt="" class="profile__icon">
+      <img src="@/assets/images/adam.jpg" alt="" class="profile__icon">
       <div class="profile__text">
         <h3 class="profile__name">
           {{ name }}
         </h3>
-        <p class="profile__description">
-          {{ desc }}
-        </p>
+        <slot />
       </div>
     </div>
   </div>
@@ -22,7 +20,7 @@
 
 <script>
 export default {
-  props: ['image', 'name', 'desc']
+  props: ['image_url', 'name']
 }
 </script>
 <style lang="scss" scoped>
@@ -43,7 +41,7 @@ export default {
       position: relative;
       font-size: 12px;
       color: #ABABAB;
-      margin-bottom: 80px;
+      margin-bottom: 52px;
       &::after{
         position: absolute;
         width: 110%;
@@ -54,29 +52,56 @@ export default {
     }
     .wrap-btm {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
     &__icon {
-      width: 80px;
-      height: 80px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
+      flex-shrink: 0;
+      margin-bottom: 32px;
     }
     &__text {
       display: flex;
       justify-content: center;
-      align-items: left;
+      align-items: center;
       flex-direction: column;
       text-align: left;
-      margin-left: 20px;
+      width: 100%;
     }
     &__name {
       font-size: 30px;
       font-weight: 600;
       margin-bottom: 20px;
+      text-align: center;
     }
     &__description {
       font-size: 10px;
     }
   }
+@include pc() {
+  .profile {
+    .wrap-btm {
+      flex-direction: row;
+    }
+    &__icon {
+      margin: 0;
+    }
+    &__ruby {
+      margin-bottom: 80px;
+    }
+    &__text {
+      align-items: left;
+      align-self: flex-start;
+      margin-left: 20px;
+      width: 60%;
+    }
+    &__name {
+      text-align: left;
+      align-self: flex-start;
+    }
+  }
+}
 </style>

@@ -2,6 +2,10 @@
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 * {
   box-sizing: border-box;
@@ -12,4 +16,20 @@ body {
 img {
   max-width: 100%;
   vertical-align: bottom;
+}
+
+.section:nth-child(odd) {
+  background: #fff;
+}
+
+.section:nth-child(even) {
+  background: #faffff;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+@include pc () {
+  padding: 40px 0;
 }

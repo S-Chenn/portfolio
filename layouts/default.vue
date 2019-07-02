@@ -1,55 +1,84 @@
 <template>
   <div>
+    <div class="hamburger-menu" @click="drawerOn = !drawerOn" />
+    <div
+      :class="{ jsDrawerMask: drawerOn }"
+      @click="drawerOn = !drawerOn"
+    />
+    <ex-header class="header" :class="{ jsDrawerOpen: drawerOn }" />
     <nuxt />
+    <ExFooter class="footer" :class="{ jsDrawerOpen: drawerOn }" />
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<script>
+import ExHeader from '@/components/ExHeader.vue'
+import ExFooter from '@/components/ExFooter.vue'
+export default {
+  components: {
+    ExHeader,
+    ExFooter
+  },
+  data() {
+    return {
+      drawerOn: false
+    }
+  }
 }
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+</script>
+<style lang="scss" scoped>
+.header {
+  transform: translateX(-100%);
+  transition: .3s all;
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.footer {
+  transform: translateX(-100%);
+  transition: .3s all;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.jsDrawerOpen {
+  transform: translateX(0);
 }
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.hamburger-menu {
+  position: fixed;
+  z-index: 10;
+  top: 16px;
+  left: 16px;
+  width: 32px;
+  height: 32px;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+  &::before{
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 100%;
+    border-bottom: 4px solid #000;
+  }
 }
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.jsDrawerMask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.6;
+  background-color: #000;
+  z-index: 20;
+}
+@include pc (){
+  .header {
+    transform: none;
+    transition: none;
+  }
+  .footer {
+    transform: none;
+    transition: none;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  .jsDrawerMask{
+    display: none;
+  }
 }
 </style>
