@@ -74,6 +74,7 @@ export default {
    background-color: #36393F;
    position: relative;
    width: 100%;
+   min-height: 320px;
    .heading-wrap {
      background-color: rgba(0, 0, 0, 0.3);
      position: absolute;
@@ -95,6 +96,8 @@ export default {
    }
 
    &__img {
+     object-fit: cover;
+     min-height: 320px;
      width: 100%;
    }
  }
@@ -107,6 +110,9 @@ export default {
          line-height: 1.2;
          padding: auto;
        }
+     }
+     &__image {
+       object-fit: none;
      }
    }
  }
