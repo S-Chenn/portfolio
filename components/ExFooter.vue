@@ -3,17 +3,17 @@
     <nav class="footer-nav">
       <ul class="footer-nav__list">
         <li class="footer-nav__item">
-          <nuxt-link class="footer-nav__link" to="">
+          <a class="footer-nav__link" href="#profile">
             Profile
-          </nuxt-link>
+          </a>
         </li>
         <li class="footer-nav__item">
-          <nuxt-link class="footer-nav__link" to="">
+          <a class="footer-nav__link" href="#skills">
             Skills
-          </nuxt-link>
+          </a>
         </li>
         <li class="footer-nav__item">
-          <nuxt-link class="footer-nav__link" to="">
+          <nuxt-link class="footer-nav__link" to="/contact">
             Contact
           </nuxt-link>
         </li>

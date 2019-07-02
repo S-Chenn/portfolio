@@ -1,24 +1,24 @@
 <template>
   <header class="header">
     <div class="header__logo">
-      <nuxt-link to="#top" class="header__logo-link">
+      <a href="#top" class="header__logo-link">
         Potofolio
-      </nuxt-link>
+      </a>
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <nuxt-link to="#profile" class="header__nav-link">
+          <a href="#profile" class="header__nav-link">
             Profile
-          </nuxt-link>
+          </a>
         </li>
         <li class="header__nav-item">
-          <nuxt-link to="#skills" class="header__nav-link">
+          <a href="#skills" class="header__nav-link">
             Skills
-          </nuxt-link>
+          </a>
         </li>
         <li class="header__nav-item">
-          <nuxt-link to="#contact" class="header__nav-link">
+          <nuxt-link to="/contact" class="header__nav-link">
             Contact
           </nuxt-link>
         </li>
