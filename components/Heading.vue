@@ -26,6 +26,8 @@ export default {
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 8px;
+    text-align: center;
+    line-height: 1.3;
   }
   &__ruby {
     position: relative;
