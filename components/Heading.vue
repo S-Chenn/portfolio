@@ -34,8 +34,6 @@ export default {
     font-size: 12px;
     color: #ABABAB;
     margin-bottom: 40px;
-     &::after{
-    }
   }
 }
 /deep/ .heading__ruby::after {
@@ -47,12 +45,8 @@ export default {
 }
 @include pc() {
 .heading {
-  &__title {
-  }
   &__ruby {
     margin-bottom: 80px;
-     &::after{
-    }
   }
 }
 }
