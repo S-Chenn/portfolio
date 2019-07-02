@@ -58,7 +58,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 0;
   &__heading {
     margin: 0 auto;
   }
