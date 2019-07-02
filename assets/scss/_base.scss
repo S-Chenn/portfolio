@@ -21,3 +21,11 @@ img {
 .section:nth-child(even) {
   background: #faffff;
 }
+
+.section {
+  padding: 80px 0;
+}
+
+@include pc () {
+  padding: 40px 0;
+}
