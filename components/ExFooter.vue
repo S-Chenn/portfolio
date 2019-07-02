@@ -48,10 +48,10 @@ export default {
       justify-content: space-evenly;
       align-items: flex-start;
       flex-direction: column;
-      padding: -8px;
+      padding: -16px;
     }
     &__item {
-      padding: 8px;
+      padding: 16px;
     }
     &__link {
       font-size: 16px;

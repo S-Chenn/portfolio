@@ -43,7 +43,7 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 32px;
+    padding: 64px 32px;
 
     &__logo {
       font-size: 28px;
@@ -57,7 +57,7 @@ export default {
     }
     &__nav-item {
       position: relative;
-      margin: 8px 0;
+      margin: 16px 0;
       height: 100%;
       font-size: 20px;
       &::before {

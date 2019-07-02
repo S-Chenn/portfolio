@@ -32,13 +32,15 @@ export default {
     font-size: 12px;
     color: #ABABAB;
     margin-bottom: 80px;
-    &::after{
+     &::after{
+    }
+  }
+}
+/deep/ .heading__ruby::after {
       position: absolute;
       width: 110%;
       content:"";
       bottom: -20px;
       border-bottom: 4px solid #000;
-    }
-  }
 }
 </style>
