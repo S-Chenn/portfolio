@@ -3,14 +3,14 @@
     <nav class="footer-nav">
       <ul class="footer-nav__list">
         <li class="footer-nav__item">
-          <a class="footer-nav__link" href="#profile">
+          <nuxt-link class="footer-nav__link" v-scroll-to="'/#profile'">
             Profile
-          </a>
+          </nuxt-link>
         </li>
         <li class="footer-nav__item">
-          <a class="footer-nav__link" href="#skills">
+          <nuxt-link class="footer-nav__link" v-scroll-to="'/#skills'">
             Skills
-          </a>
+          </nuxt-link>
         </li>
         <li class="footer-nav__item">
           <nuxt-link class="footer-nav__link" to="/contact">
