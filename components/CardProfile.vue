@@ -75,6 +75,7 @@ export default {
       font-size: 30px;
       font-weight: 600;
       margin-bottom: 20px;
+      text-align: center;
     }
     &__description {
       font-size: 10px;
@@ -98,6 +99,7 @@ export default {
       width: 60%;
     }
     &__name {
+      text-align: left;
       align-self: flex-start;
     }
   }
