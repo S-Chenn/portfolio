@@ -3,12 +3,12 @@
     <nav class="footer-nav">
       <ul class="footer-nav__list">
         <li class="footer-nav__item">
-          <nuxt-link v-scroll-to="'#profile'" to class="footer-nav__link">
+          <nuxt-link v-scroll-to="'#profile'" to="/" class="footer-nav__link">
             Profile
           </nuxt-link>
         </li>
         <li class="footer-nav__item">
-          <nuxt-link v-scroll-to="'#skills'" to class="footer-nav__link">
+          <nuxt-link v-scroll-to="'#skills'" to="/" class="footer-nav__link">
             Skills
           </nuxt-link>
         </li>

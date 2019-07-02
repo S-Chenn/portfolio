@@ -1,19 +1,19 @@
 <template>
   <header class="header">
     <div class="header__logo">
-      <nuxt-link v-scroll-to="'#top'" to class="header__logo-link">
+      <nuxt-link v-scroll-to="'#top'" to="/" class="header__logo-link">
         Potofolio
       </nuxt-link>
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <nuxt-link v-scroll-to="'#profile'" to class="header__nav-link">
+          <nuxt-link v-scroll-to="'#profile'" to="/" class="header__nav-link">
             Profile
           </nuxt-link>
         </li>
         <li class="header__nav-item">
-          <nuxt-link v-scroll-to="'#skills'" to class="header__nav-link">
+          <nuxt-link v-scroll-to="'#skills'" to="/" class="header__nav-link">
             Skills
           </nuxt-link>
         </li>
