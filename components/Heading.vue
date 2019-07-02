@@ -31,7 +31,7 @@ export default {
     position: relative;
     font-size: 12px;
     color: #ABABAB;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
      &::after{
     }
   }
@@ -42,5 +42,16 @@ export default {
       content:"";
       bottom: -20px;
       border-bottom: 4px solid #000;
+}
+@include pc() {
+.heading {
+  &__title {
+  }
+  &__ruby {
+    margin-bottom: 80px;
+     &::after{
+    }
+  }
+}
 }
 </style>
