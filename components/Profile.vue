@@ -1,12 +1,15 @@
 <template>
-  <section id="profile" class="profile-section section">
+  <section id="profile" class="profile section">
     <div class="container">
-      <CardProfile :image_url="src" name="Chen Zhenyi">
+      <CardProfile class="profile__card" :image_url="src" name="Chen Zhenyi">
         <p class="introduction">
           フロントエンドエンジニア(自称)をやっています。前職は無職、部活は帰宅部のエリートニート街道を歩んでおりました。
           南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏魑魅魍魎南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏
         </p>
       </CardProfile>
+      <div class="profile__timeline">
+        <a class="twitter-timeline" href="https://twitter.com/SChen90239869?ref_src=twsrc%5Etfw">Tweets by SChen90239869</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
+      </div>
     </div>
   </section>
 </template>
@@ -26,12 +29,14 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  .profile-section {
+  .profile {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 40px 0;
+    &__card {
+      margin-bottom: 40px;
+    }
     .introduction {
       font-size: 10px;
       line-height: 2.0;
@@ -39,8 +44,10 @@ export default {
   }
 
 @include pc() {
-  .profile-section {
-    padding: 80px 0;
+  .profile{
+    &__card {
+      margin-bottom: 80px;
+    }
   }
 }
 </style>
