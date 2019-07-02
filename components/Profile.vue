@@ -1,7 +1,7 @@
 <template>
   <section id="profile" class="profile section">
     <div class="container">
-      <CardProfile class="profile__card" :image_url="src" name="Chen Zhenyi">
+      <CardProfile class="profile__card" :image_url="src" name="S-Chen">
         <p class="introduction">
           フロントエンドエンジニア(自称)をやっています。前職は無職、部活は帰宅部のエリートニート街道を歩んでおりました。
           南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏魑魅魍魎南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏南無阿弥陀仏
