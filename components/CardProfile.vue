@@ -48,6 +48,7 @@ export default {
       &::after{
         position: absolute;
         width: 110%;
+        left: 0;
         content:"";
         bottom: -20px;
         border-bottom: 4px solid #000;
