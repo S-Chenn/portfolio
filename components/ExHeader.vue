@@ -63,16 +63,32 @@ export default {
       &::before {
         position: absolute;
         content: "";
-        left: 0;
+        right: 50%;
         bottom: 0;
-        width: 100%;
+        width: 0;
         height: 4px;
         background-color: #fff;
         opacity: 0;
-        transition: opacity .5s;
+        transition: all .5s ease;
       }
       &:hover::before {
         opacity: 1;
+        width: 50%;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 4px;
+        background-color: #fff;
+        opacity: 0;
+        transition: all .5s ease;
+      }
+      &:hover::after {
+        opacity: 1;
+        width: 50%;
       }
     }
     &__nav-link {
