@@ -5,7 +5,7 @@
       :class="{ jsDrawerMask: drawerOn }"
       @click="drawerOn = !drawerOn"
     />
-    <ex-header class="header" :class="{ jsDrawerOpen: drawerOn }" />
+    <ex-header class="header" :class="{ jsDrawerOpen: drawerOn }" :drawer="drawerOn" />
     <nuxt />
     <ExFooter class="footer" :class="{ jsDrawerOpen: drawerOn }" />
   </div>
@@ -21,7 +21,13 @@ export default {
   },
   data() {
     return {
-      drawerOn: false
+      drawerOn: false,
+      message: 'hello'
+    }
+  },
+  methods: {
+    sayMessage(message) {
+      alert(message)
     }
   }
 }
