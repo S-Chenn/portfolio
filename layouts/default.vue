@@ -7,7 +7,7 @@
     />
     <ex-header class="header" :class="{ jsDrawerOpen: drawerOn }" @drawer-close="drawerClose()" />
     <nuxt />
-    <ExFooter class="footer" :class="{ jsDrawerOpen: drawerOn }" />
+    <ExFooter class="footer" :class="{ jsDrawerOpen: drawerOn }" @alert="alert1()" />
   </div>
 </template>
 
@@ -28,6 +28,9 @@ export default {
   methods: {
     drawerClose() {
       this.drawerOn = false
+    },
+    alert1(text) {
+      text = this.message
     }
   }
 }
