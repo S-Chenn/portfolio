@@ -1,7 +1,12 @@
 $mq-sp-width: 640px;
+$vw-screen-width: 375;
 
 @mixin pc ($min-width: $mq-sp-width) {
   @media screen and (min-width: $min-width) {
     @content;
   }
+}
+
+@function vw ($value) {
+  @return $value * 100 / $vw-screen-width * 1vw;
 }
