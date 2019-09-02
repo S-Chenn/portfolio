@@ -80,11 +80,20 @@ export default {
   top: calc(50% - (#{vw(50)} * 1.41 / 2));
   border-top: 4px solid #ccc;
   border-right: 4px solid #ccc;
-  opacity: 0.7;
+  opacity: 0.5;
   width: vw(50);
   height: vw(50);
-
   color: transparent;
+
+  &:focus {
+    outline: none;
+    opacity: 0.7;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
   @include pc(){
     top: calc(50% - (60px * 1.41 / 2));
     width: 80px;
