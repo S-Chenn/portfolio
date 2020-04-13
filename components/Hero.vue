@@ -76,7 +76,7 @@ export default {
 
 /deep/ .VueCarousel-navigation-button {
   color: #fff;
-  z-index: 9999;
+  z-index: 999;
   top: calc(50% - (#{vw(50)} * 1.41 / 2));
   border-top: 4px solid #ccc;
   border-right: 4px solid #ccc;

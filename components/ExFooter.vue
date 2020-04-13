@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 .footer {
   position: fixed;
-  z-index: 110;
+  z-index: 2100;
   bottom: 0;
   display: flex;
   flex-direction: column;

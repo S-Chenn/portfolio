@@ -13,9 +13,11 @@
           {{ name }}
         </h3>
         <slot />
-        <a href="https://twitter.com/SChen90239869" target="_blank" class="twitter-link">
-          <i class="fab fa-twitter twitter-icon"></i>
-        </a>
+        <div class="twitter-icon">
+          <a href="https://twitter.com/SChen90239869" target="_blank" class="twitter-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>

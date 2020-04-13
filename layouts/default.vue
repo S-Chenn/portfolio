@@ -72,7 +72,7 @@ export default {
   right: 0;
   opacity: 0.6;
   background-color: #000;
-  z-index: 20;
+  z-index: 1000;
 }
 @include pc (){
   .header {
