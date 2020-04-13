@@ -34,10 +34,12 @@ export default {
     font-size: 12px;
     color: #ABABAB;
     margin-bottom: 40px;
+    text-align: center;
   }
 }
 /deep/ .heading__ruby::after {
       position: absolute;
+      left: 0;
       width: 110%;
       content:"";
       bottom: -20px;

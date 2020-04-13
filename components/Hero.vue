@@ -9,7 +9,10 @@
         :loop="true"
         :autoplay-timeout="5000"
         :speed="1200"
-        :navigation-enabled="false"
+        :navigation-enabled="true"
+        :navigation-next-label="none"
+        :navigation-prev-label="none"
+        :navigation-click-target-size="10"
         :pagination-size="10"
         :pagination-padding="0"
         pagination-active-color="rgba(255, 255, 255, 0.7)"
@@ -70,6 +73,50 @@ export default {
   position: absolute;
   bottom: 10%;
 }
+
+/deep/ .VueCarousel-navigation-button {
+  color: #fff;
+  z-index: 999;
+  top: calc(50% - (#{vw(50)} * 1.41 / 2));
+  border-top: 4px solid #ccc;
+  border-right: 4px solid #ccc;
+  opacity: 0.5;
+  width: vw(50);
+  height: vw(50);
+  color: transparent;
+
+  &:focus {
+    outline: none;
+    opacity: 0.7;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @include pc(){
+    top: calc(50% - (60px * 1.41 / 2));
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/deep/ .VueCarousel-navigation-next {
+  right: 6vw;
+  transform: rotate(45deg);
+  @include pc(){
+   right: 4vw;
+  }
+}
+
+/deep/ .VueCarousel-navigation-prev {
+  left: 6vw;
+  transform: rotate(-135deg);
+  @include pc(){
+   left: 4vw;
+  }
+}
+
  .hero {
    background-color: #36393F;
    position: relative;
@@ -89,7 +136,7 @@ export default {
         font-size: 2em;
         color: rgba(255, 255, 255, 0.85);
         text-align: center;
-        padding: 0 16px;
+        padding: 0 vw(50);
         margin-bottom: 16px;
         line-height: 1.2;
       }
@@ -108,7 +155,7 @@ export default {
        .heading {
          font-size: 60px;
          line-height: 1.2;
-         padding: auto;
+         padding: 100px;
        }
      }
      &__image {

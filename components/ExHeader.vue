@@ -1,24 +1,24 @@
 <template>
   <header class="header">
     <div class="header__logo">
-      <nuxt-link v-scroll-to="'#top'" to="/" class="header__logo-link">
+      <nuxt-link v-scroll-to="'#top'" to="/" class="header__logo-link" @click="this.$emit('drawerClose')">
         Potofolio
       </nuxt-link>
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <nuxt-link v-scroll-to="'#profile'" to="/" class="header__nav-link">
+          <nuxt-link v-scroll-to="'#profile'" to="/" class="header__nav-link" @click="this.$emit('drawerClose')">
             Profile
           </nuxt-link>
         </li>
         <li class="header__nav-item">
-          <nuxt-link v-scroll-to="'#skills'" to="/" class="header__nav-link">
+          <nuxt-link v-scroll-to="'#skills'" to="/" class="header__nav-link" @click="this.$emit('drawerClose')">
             Skills
           </nuxt-link>
         </li>
         <li class="header__nav-item">
-          <nuxt-link to="/contact" class="header__nav-link">
+          <nuxt-link to="/contact" class="header__nav-link" @click="this.$emit('drawerClose')">
             Contact
           </nuxt-link>
         </li>
@@ -34,7 +34,7 @@ export default {
 <style lang="scss" scoped>
   .header {
     position: fixed;
-    z-index: 100;
+    z-index: 2000;
     width: 60%;
     height: 60%;
     background-color: #aaaaaa;
@@ -63,16 +63,32 @@ export default {
       &::before {
         position: absolute;
         content: "";
-        left: 0;
+        right: 50%;
         bottom: 0;
-        width: 100%;
+        width: 0;
         height: 4px;
         background-color: #fff;
         opacity: 0;
-        transition: opacity .5s;
+        transition: all .5s ease;
       }
       &:hover::before {
         opacity: 1;
+        width: 50%;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 4px;
+        background-color: #fff;
+        opacity: 0;
+        transition: all .5s ease;
+      }
+      &:hover::after {
+        opacity: 1;
+        width: 50%;
       }
     }
     &__nav-link {
