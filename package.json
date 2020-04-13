@@ -36,6 +36,7 @@
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "vue-carousel": "^0.18.0",
-    "vue-scrollto": "^2.15.0"
+    "vue-scrollto": "^2.15.0",
+    "yarn": "^1.22.4"
   }
 }
