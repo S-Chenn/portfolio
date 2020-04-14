@@ -5,9 +5,9 @@
       :class="{ jsDrawerMask: drawerOn }"
       @click="drawerOn = !drawerOn"
     />
-    <ex-header class="header" :class="{ jsDrawerOpen: drawerOn }" />
+    <ex-header class="header" :class="{ jsDrawerOpen: drawerOn }" @drawer-close="drawerClose()" />
     <nuxt />
-    <ExFooter class="footer" :class="{ jsDrawerOpen: drawerOn }" />
+    <ExFooter class="footer" :class="{ jsDrawerOpen: drawerOn }" @alert="alert1()" />
   </div>
 </template>
 
@@ -21,7 +21,16 @@ export default {
   },
   data() {
     return {
-      drawerOn: false
+      drawerOn: false,
+      message: 'hello'
+    }
+  },
+  methods: {
+    drawerClose() {
+      this.drawerOn = false
+    },
+    alert1(text) {
+      text = this.message
     }
   }
 }
@@ -63,7 +72,7 @@ export default {
   right: 0;
   opacity: 0.6;
   background-color: #000;
-  z-index: 20;
+  z-index: 1000;
 }
 @include pc (){
   .header {

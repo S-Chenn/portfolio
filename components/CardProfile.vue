@@ -13,6 +13,11 @@
           {{ name }}
         </h3>
         <slot />
+        <div class="twitter-icon">
+          <a href="https://twitter.com/SChen90239869" target="_blank" class="twitter-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -20,7 +25,7 @@
 
 <script>
 export default {
-  props: ['image_url', 'name']
+  props: ['imageUrl', 'name']
 }
 </script>
 <style lang="scss" scoped>
@@ -45,6 +50,7 @@ export default {
       &::after{
         position: absolute;
         width: 110%;
+        left: 0;
         content:"";
         bottom: -20px;
         border-bottom: 4px solid #000;
@@ -79,6 +85,20 @@ export default {
     }
     &__description {
       font-size: 10px;
+    }
+    .twitter-link {
+      text-align: left;
+      height: 50px;
+      width: 50px;
+      margin: 0 auto 0 0;
+    }
+    .twitter-icon {
+      color: #1DA1F2;
+      padding: 8px;
+      font-size: 48px;
+      height: 50px;
+      width: 50px;
+      display: inline-block;
     }
   }
 @include pc() {

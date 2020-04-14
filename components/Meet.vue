@@ -1,7 +1,7 @@
 <template>
   <section class="meet section">
     <div class="container">
-      <Heading title="Meet Elephants" ruby="ゾウと出会う" />
+      <Heading title="Meet The Elephants" ruby="ゾウと出会う" />
       <figure class="meet__image">
         <img src="@/assets/images/elephant.jpg" alt="elephant" class="meet__africa">
       </figure>
