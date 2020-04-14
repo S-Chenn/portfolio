@@ -70,14 +70,14 @@ export default {
   position: absolute;
   bottom: 10%;
 }
- .hero {
-   background-color: #36393F;
-   position: relative;
-   width: 100%;
-   min-height: 320px;
-   .heading-wrap {
-     background-color: rgba(0, 0, 0, 0.3);
-     position: absolute;
+.hero {
+    background-color: #36393F;
+    position: relative;
+    width: 100%;
+    min-height: 320px;
+    .heading-wrap {
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
       top: 0;
       left: 0;
       bottom: 0;
@@ -93,27 +93,28 @@ export default {
         margin-bottom: 16px;
         line-height: 1.2;
       }
-   }
+    }
 
-   &__img {
-     object-fit: cover;
-     min-height: 320px;
-     width: 100%;
-   }
- }
+    &__img {
+      object-fit: cover;
+      min-height: 320px;
+      width: 100%;
+    }
+    }
 
- @include pc(){
-   .hero {
-     .heading-wrap {
-       .heading {
-         font-size: 60px;
-         line-height: 1.2;
-         padding: auto;
-       }
-     }
-     &__image {
-       object-fit: none;
-     }
-   }
- }
+    @include pc() {
+      .hero {
+        .heading-wrap {
+          .heading {
+            font-size: 60px;
+            line-height: 1.2;
+            padding: auto;
+          }
+        }
+
+        &__image {
+          object-fit: none;
+        }
+      }
+    }
 </style>
