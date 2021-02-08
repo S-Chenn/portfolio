@@ -110,7 +110,7 @@ export default {
     align-items: center;
     padding: 32px;
     transform: none;
-       &__logo {
+      &__logo {
       margin: 0;
       font-size: 28px;
     }
