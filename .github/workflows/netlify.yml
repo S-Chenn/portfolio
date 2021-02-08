@@ -1,0 +1,36 @@
+name: Netlify
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+        
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+          
+      - name: yarn install and build
+        run: |
+          yarn install
+          yarn nuxt build
+      
+      - name: Deploy to netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: 'MwvPrncD3KY5ESgM-rK5IMox4sGEGvhAh5FzgpYic9U'
+          NETLIFY_SITE_ID: '9aad9aa2-8859-4000-baa9-8b52271cbead'
+        with:
+          args: deploy --dir=./dist --prod
+          secrets: '["MwvPrncD3KY5ESgM-rK5IMox4sGEGvhAh5FzgpYic9U", "9aad9aa2-8859-4000-baa9-8b52271cbead"]'
