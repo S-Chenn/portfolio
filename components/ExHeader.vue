@@ -8,12 +8,12 @@
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <nuxt-link v-scroll-to="'#profile'" to="/" class="header__nav-link" @click="this.$emit('drawerClose')">
+          <nuxt-link v-scroll-to="'#profile'" to="/#profile" class="header__nav-link" @click="this.$emit('drawerClose')">
             Profile
           </nuxt-link>
         </li>
         <li class="header__nav-item">
-          <nuxt-link v-scroll-to="'#skills'" to="/" class="header__nav-link" @click="this.$emit('drawerClose')">
+          <nuxt-link v-scroll-to="'#skills'" to="/#skills" class="header__nav-link" @click="this.$emit('drawerClose')">
             Skills
           </nuxt-link>
         </li>
