@@ -15,7 +15,7 @@
         <slot />
         <div class="twitter-icon">
           <a href="https://twitter.com/SChen90239869" target="_blank" class="twitter-link">
-            <i class="fab fa-twitter"></i>
+            <font-awesome-icon :icon="['fab', 'twitter']" />
           </a>
         </div>
       </div>
@@ -24,8 +24,19 @@
 </template>
 
 <script>
+
 export default {
-  props: ['imageUrl', 'name']
+
+  props: {
+    imageUrl: {
+      type: String,
+      default: ''
+    },
+    name: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -93,12 +104,12 @@ export default {
       margin: 0 auto 0 0;
     }
     .twitter-icon {
-      color: #1DA1F2;
-      padding: 8px;
-      font-size: 48px;
-      height: 50px;
-      width: 50px;
-      display: inline-block;
+      // color: #1DA1F2;
+      // padding: 8px;
+      // font-size: 48px;
+      // height: 50px;
+      // width: 50px;
+      // display: inline-block;
     }
   }
 @include pc() {
