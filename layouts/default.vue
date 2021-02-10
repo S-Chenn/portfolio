@@ -24,12 +24,19 @@ export default {
       drawerOn: false
     }
   },
+  created() {
+    this.setListener()
+  },
   methods: {
+    setListener() {
+      this.$nuxt.$on('close', this.drawerClose)
+    },
     drawerClose() {
       this.drawerOn = false
     }
   }
 }
+
 </script>
 <style lang="scss" scoped>
 .header {

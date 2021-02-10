@@ -1,24 +1,24 @@
 <template>
   <header class="header">
     <div class="header__logo">
-      <nuxt-link v-scroll-to="'#top'" to="/" class="header__logo-link" @click="this.$emit('drawerClose')">
+      <nuxt-link v-scroll-to="'#top'" to="/" class="header__logo-link" @click.native="close">
         Potofolio
       </nuxt-link>
     </div>
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <nuxt-link v-scroll-to="'#profile'" to="/#profile" class="header__nav-link" @click="this.$emit('drawerClose')">
+          <nuxt-link v-scroll-to="'#profile'" to="/#profile" class="header__nav-link" @click.native="close">
             Profile
           </nuxt-link>
         </li>
         <li class="header__nav-item">
-          <nuxt-link v-scroll-to="'#skills'" to="/#skills" class="header__nav-link" @click="this.$emit('drawerClose')">
+          <nuxt-link v-scroll-to="'#skills'" to="/#skills" class="header__nav-link" @click.native="close">
             Skills
           </nuxt-link>
         </li>
         <li class="header__nav-item">
-          <nuxt-link to="/contact" class="header__nav-link" @click="this.$emit('drawerClose')">
+          <nuxt-link to="/contact" class="header__nav-link" @click.native="close">
             Contact
           </nuxt-link>
         </li>
@@ -29,6 +29,14 @@
 
 <script>
 export default {
+  mounted() {
+    this.close()
+  },
+  methods: {
+    close() {
+      this.$nuxt.$emit('close')
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
