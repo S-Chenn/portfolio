@@ -36,9 +36,9 @@
         <skill-card class="card" title="Nuxt.js" description="Nuxt.jsを用いたモダンな開発が可能です。">
           <img class="card__icon" src="~@/assets/images/materials/vue.svg" alt="Nuxt.js">
         </skill-card>
-        <skill-card class="card" title="Intel" description="Intel入ってます">
+        <!-- <skill-card class="card" title="Intel" description="Intel入ってます">
           <img class="card__icon" src="~@/assets/images/materials/intel.svg" alt="Intel">
-        </skill-card>
+        </skill-card> -->
       </div>
     </div>
   </section>
