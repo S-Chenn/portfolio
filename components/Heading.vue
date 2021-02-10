@@ -10,7 +10,16 @@
 </template>
 <script>
 export default {
-  props: ['title', 'ruby']
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    ruby: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
