@@ -7,7 +7,7 @@
     />
     <ex-header class="header" :class="{ jsDrawerOpen: drawerOn }" @drawer-close="drawerClose()" />
     <nuxt />
-    <ExFooter class="footer" :class="{ jsDrawerOpen: drawerOn }" @alert="alert1()" />
+    <ExFooter class="footer" :class="{ jsDrawerOpen: drawerOn }" />
   </div>
 </template>
 
@@ -21,16 +21,12 @@ export default {
   },
   data() {
     return {
-      drawerOn: false,
-      message: 'hello'
+      drawerOn: false
     }
   },
   methods: {
     drawerClose() {
       this.drawerOn = false
-    },
-    alert1(text) {
-      text = this.message
     }
   }
 }
@@ -54,14 +50,14 @@ export default {
   left: 16px;
   width: 32px;
   height: 32px;
-  border-top: 4px solid #000;
-  border-bottom: 4px solid #000;
+  border-top: 4px solid rgba($color: #222, $alpha: 0.9);
+  border-bottom: 4px solid rgba($color: #222, $alpha: 0.9);
   &::before{
     position: absolute;
     content: "";
     height: 10px;
     width: 100%;
-    border-bottom: 4px solid #000;
+    border-bottom: 4px solid rgba($color: #222, $alpha: 0.9);
   }
 }
 .jsDrawerMask {
