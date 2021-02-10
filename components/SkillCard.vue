@@ -15,7 +15,15 @@
 </template>
 <script>
 export default {
-  props: ['title', 'description']
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    description: {
+      type: String,
+      default: ''
+    } }
 }
 </script>
 <style lang="scss">
