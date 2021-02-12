@@ -1,11 +1,11 @@
 .container {
-  max-width: 1300px;
+  max-width: $bp-wide + 'px';
   margin: 0 auto;
-  padding: 0 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0 4%;
+
+  @include pc(){
+    padding: 0 4%;
+  }
 }
 * {
   box-sizing: border-box;
@@ -28,9 +28,9 @@ img {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 @include pc () {
-  padding: 40px 0;
+  padding: 80px 0;
 }
