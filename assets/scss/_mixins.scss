@@ -1,12 +1,165 @@
-$mq-sp-width: 640px;
-$vw-screen-width: 375;
+$bp-pc: 768;
+$bp-wide: 1920;
+$vw-screen-width: 750;
 
-@mixin pc ($min-width: $mq-sp-width) {
+
+@mixin pc ($min-width: $bp-pc) {
+  @media screen and (min-width: $min-width + 'px') {
+    @content;
+  }
+}
+
+@mixin wide($min-width: $bp-wide) {
+  @media screen and (min-width: $min-width + 'px') {
+    @content;
+  }
+}
+
+@mixin mq($min-width: $break-point) {
   @media screen and (min-width: $min-width) {
     @content;
   }
 }
 
-@function vw ($value) {
-  @return $value * 100 / $vw-screen-width * 1vw;
+@function vw($px, $bp:$vw-screen-width) {
+
+  $result: $px / $bp * 100vw;
+
+  @return $result;
+}
+
+@function vwpc($px, $bp:$bp-wide) {
+
+  $result: $px / $bp * 100vw;
+
+  @return $result;
+}
+
+@mixin padding($a: null, $b:null, $c:null, $d:null) {
+
+  @if $b == null {
+    padding: $a;
+
+    @include wide () {
+      padding: $a + 'px';
+    }
+
+  } @else if $c == null {
+    padding-top: vwpc($a);
+    padding-right: vwpc($b);
+    padding-bottom: vwpc($a);
+    padding-left: vwpc($b);
+
+    @include wide () {
+      padding-top: $a + 'px';
+      padding-right: $b + 'px';
+      padding-bottom: $a + 'px';
+      padding-left: $b + 'px';
+    }
+
+  } @else if $d == null {
+    padding-top: vwpc($a);
+    padding-right: vwpc($b);
+    padding-bottom: vwpc($c);
+    padding-left: vwpc($b);
+
+    @include wide () {
+      padding-top: $a + 'px';
+      padding-right: $b + 'px';
+      padding-bottom: $c + 'px';
+      padding-left: $b + 'px';
+    }
+
+  } @else {
+    padding-top: vwpc($a);
+    padding-right: vwpc($b);
+    padding-bottom: vwpc($c);
+    padding-left: vwpc($d);
+
+    @include wide () {
+      padding-top: $a + 'px';
+      padding-right: $b + 'px';
+      padding-bottom: $c + 'px';
+      padding-left: $d + 'px';
+    }
+
+  }
+}
+
+@mixin margin($a: null, $b:null, $c:null, $d:null) {
+
+  @if $b == null {
+    margin: $a;
+
+    @include wide () {
+      margin: $a + 'px';
+    }
+
+  } @else if $c == null {
+    margin-top: vwpc($a);
+    margin-right: vwpc($b);
+    margin-bottom: vwpc($a);
+    margin-left: vwpc($b);
+
+    @include wide () {
+      margin-top: $a + 'px';
+      margin-right: $b + 'px';
+      margin-bottom: $a + 'px';
+      margin-left: $b + 'px';
+    }
+
+  } @else if $d == null {
+    margin-top: vwpc($a);
+    margin-right: vwpc($b);
+    margin-bottom: vwpc($c);
+    margin-left: vwpc($b);
+
+    @include wide () {
+      margin-top: $a + 'px';
+      margin-right: $b + 'px';
+      margin-bottom: $c + 'px';
+      margin-left: $b + 'px';
+    }
+
+  } @else {
+    margin-top: vwpc($a);
+    margin-right: vwpc($b);
+    margin-bottom: vwpc($c);
+    margin-left: vwpc($d);
+
+    @include wide () {
+      margin-top: $a + 'px';
+      margin-right: $b + 'px';
+      margin-bottom: $c + 'px';
+      margin-left: $d + 'px';
+    }
+
+  }
+}
+
+@mixin width($width) {
+
+  width: vwpc($width);
+
+  @include wide () {
+    width: $width + 'px';
+  }
+}
+
+@mixin height($height) {
+
+  height: vwpc($height);
+
+  @include wide () {
+    height: $height + 'px';
+  }
+}
+
+@mixin fz($fz) {
+
+  font-size: vwpc($fz);
+
+  @include wide () {
+    font-size: $fz + 'px';
+  }
 }
