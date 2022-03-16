@@ -18,11 +18,11 @@
         pagination-active-color="rgba(255, 255, 255, 0.7)"
         pagination-color="transparent"
       >
-        <slide><img src="@/assets/images/hero-1.jpg" class="hero__img hero__img-1" alt="hero-1"></slide>
-        <slide><img src="@/assets/images/hero-2.jpg" class="hero__img hero__img-2" alt="hero-2"></slide>
-        <slide><img src="@/assets/images/hero-3.jpg" class="hero__img hero__img-3" alt="hero-3"></slide>
-        <slide><img src="@/assets/images/hero-4.jpg" class="hero__img hero__img-4" alt="hero-4"></slide>
-        <slide><img src="@/assets/images/hero-5.jpg" class="hero__img hero__img-5" alt="hero-5"></slide>
+        <slide><div class="hero__img hero__img-1" alt="hero-1" /></slide>
+        <slide><div class="hero__img hero__img-2" alt="hero-2" /></slide>
+        <slide><div class="hero__img hero__img-3" alt="hero-3" /></slide>
+        <slide><div class="hero__img hero__img-4" alt="hero-4" /></slide>
+        <slide><div class="hero__img hero__img-5" alt="hero-5" /></slide>
       </carousel>
     </no-ssr>
     <div class="heading-wrap">
@@ -55,7 +55,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid #fff;
   box-sizing: border-box;
 }
 
@@ -97,9 +96,9 @@ export default {
   }
 
   @include pc() {
-    top: calc(50% - (60px * 1.41 / 2));
-    width: 80px;
-    height: 80px;
+    top: calc(50% - (#{vwpc(120) / 2}));
+    @include width(120);
+    @include height(120);
   }
 }
 
@@ -127,6 +126,10 @@ export default {
   width: 100%;
   min-height: 320px;
 
+  @include pc(){
+    min-height: vwpc(1000);
+  }
+
   .heading-wrap {
     background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
@@ -139,29 +142,78 @@ export default {
     align-items: center;
 
     .heading {
-      font-size: 2em;
+      font-size: vw(64);
       color: rgba(255, 255, 255, 0.85);
       text-align: center;
       padding: 0 vw(50);
-      margin-bottom: 16px;
+      margin-bottom: vw(24);
       line-height: 1.2;
     }
   }
 
   &__img {
-    object-fit: cover;
-    min-height: 320px;
     width: 100%;
+    min-height: 320px;
+    @include pc(){
+      background-size: contain;
+      padding-bottom: 1008 / 1920 * 100%;
+      max-height: 960px;
+      min-height: initial;
+    }
+
   }
+
+  &__img-1 {
+
+    background: no-repeat center / cover url('../assets/images/hero-1.jpg');
+
+    @include pc(){
+
+    }
+  }
+  &__img-2 {
+
+    background: no-repeat center / cover url('../assets/images/hero-2.jpg');
+
+    @include pc(){
+
+    }
+  }
+  &__img-3 {
+
+    background: no-repeat center / cover url('../assets/images/hero-3.jpg');
+
+    @include pc(){
+
+    }
+  }
+  &__img-4 {
+
+    background: no-repeat center / cover url('../assets/images/hero-4.jpg');
+
+    @include pc(){
+
+    }
+  }
+  &__img-5 {
+
+    background: no-repeat center / cover url('../assets/images/hero-5.jpg');
+
+    @include pc(){
+
+    }
+  }
+
 }
 
 @include pc() {
   .hero {
     .heading-wrap {
       .heading {
-        font-size: 60px;
+        @include fz(100);
         line-height: 1.2;
-        padding: 100px;
+        @include padding(100);
+        @include margin(0,0,0,0);
       }
     }
 

@@ -17,7 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "@nuxtjs/axios": "^5.3.6",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
@@ -37,7 +37,7 @@
     "eslint-plugin-vue": "^5.2.2",
     "kind-of": "^6.0.3",
     "minimist": "^1.2.5",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.1",
     "nodemon": "^1.18.9",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",

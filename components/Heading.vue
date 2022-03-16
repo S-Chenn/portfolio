@@ -24,26 +24,40 @@ export default {
 </script>
 <style lang="scss" scoped>
 .heading {
-  max-width: 600px;
-  padding: 10px 20px 20px 20px;
+  padding: vw(10) vw(20) vw(20) vw(20);
   margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @include pc(){
+  padding: 10px 20px 20px 20px;
+  }
+
   &__title {
-    font-size: 36px;
+    font-size: vw(48);
     font-weight: 600;
     margin-bottom: 8px;
     text-align: center;
     line-height: 1.3;
+
+    @include pc(){
+      @include fz(60);
+    }
+
   }
   &__ruby {
     position: relative;
-    font-size: 12px;
+    font-size: vw(16);
     color: #ABABAB;
     margin-bottom: 40px;
     text-align: center;
+
+  @include pc(){
+    @include fz(16);
+  }
+
   }
 }
 /deep/ .heading__ruby::after {

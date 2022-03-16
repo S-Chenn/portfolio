@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header__logo">
-      <nuxt-link v-scroll-to="'#top'" to="/" class="header__logo-link" @click.native="close">
+      <nuxt-link v-scroll-to="{el:'#top', offset: hedderOffset}" to="/" class="header__logo-link" @click.native="close">
         Potofolio
       </nuxt-link>
     </div>
@@ -29,12 +29,23 @@
 
 <script>
 export default {
+
+  data() {
+    return {
+      hedderOffset: {
+        type: Number,
+        default: 0
+      }
+    }
+  },
   mounted() {
     this.close()
   },
   methods: {
     close() {
       this.$nuxt.$emit('close')
+    },
+    calcHeadderOffset() {
     }
   }
 }
@@ -68,11 +79,46 @@ export default {
       margin: 16px 0;
       height: 100%;
       font-size: 20px;
+    }
+    &__nav-link {
+      color: #fff;
+      text-decoration: none;
+    }
+    &__logo-link {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  @include pc(){
+    .header{
+    width: 100%;
+    height: initial;
+    background-color: rgba(0, 0, 54, 0.80);
+    flex-direction: row;
+    color: #fff;
+    align-items: center;
+    @include padding(32, 60);
+    transform: none;
+      &__logo {
+      margin: 0;
+      @include fz(40);
+    }
+
+    &__nav-list {
+      flex-direction: row;
+    }
+    &__nav-item {
+      padding: 0;
+      @include margin(0, 20);
+      @include fz(32);
+      line-height: 1;
+      height: initial;
+
       &::before {
         position: absolute;
         content: "";
         right: 50%;
-        bottom: 0;
+        bottom: -4px;
         width: 0;
         height: 4px;
         background-color: #fff;
@@ -87,7 +133,7 @@ export default {
         position: absolute;
         content: "";
         left: 50%;
-        bottom: 0;
+        bottom: -4px;
         width: 0;
         height: 4px;
         background-color: #fff;
@@ -98,38 +144,6 @@ export default {
         opacity: 1;
         width: 50%;
       }
-    }
-    &__nav-link {
-      color: #fff;
-      text-decoration: none;
-    }
-    &__logo-link {
-      color: #fff;
-      text-decoration: none;
-    }
-  }
-  @include pc(){
-    .header{
-    width: 100%;
-    height: 80px;
-    background-color: rgba(0, 0, 54, 0.80);
-    flex-direction: row;
-    color: #fff;
-    align-items: center;
-    padding: 32px;
-    transform: none;
-      &__logo {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    &__nav-list {
-      flex-direction: row;
-    }
-    &__nav-item {
-      padding: 28px 16px;
-      margin: 0 16px;
-      font-size: 24px;
     }
     }
   }

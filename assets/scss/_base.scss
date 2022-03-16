@@ -1,10 +1,10 @@
 .container {
-  max-width: $bp-wide + 'px';
+  max-width: $bp-wide * 1px;
   margin: 0 auto;
   padding: 0 4%;
 
   @include pc(){
-    padding: 0 4%;
+    padding: 0 8%;
   }
 }
 * {
@@ -28,9 +28,9 @@ img {
 }
 
 .section {
-  padding: 40px 0;
+  padding: vw(40) 0;
 }
 
 @include pc () {
-  padding: 80px 0;
+  @include padding(80,0);
 }

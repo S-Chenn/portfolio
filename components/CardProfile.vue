@@ -1,13 +1,7 @@
 <template>
   <div class="profile">
-    <h2 class="profile__title">
-      Profile
-    </h2>
-    <p class="profile__ruby">
-      プロフィール
-    </p>
     <div class="wrap-btm">
-      <img src="@/assets/images/adam.jpg" alt="" class="profile__icon">
+      <img src="@/assets/images/profile-icon.jpg" alt="" class="profile__icon">
       <div class="profile__text">
         <h3 class="profile__name">
           {{ name }}
@@ -41,17 +35,14 @@ export default {
 </script>
 <style lang="scss" scoped>
   .profile {
-    max-width: 600px;
-    padding: 10px 20px 20px 20px;
-    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     &__title {
-      font-size: 36px;
+      font-size: vw(36);
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: vw(8);
     }
     &__ruby {
       position: relative;
@@ -104,12 +95,12 @@ export default {
       margin: 0 auto 0 0;
     }
     .twitter-icon {
-      // color: #1DA1F2;
-      // padding: 8px;
-      // font-size: 48px;
-      // height: 50px;
-      // width: 50px;
-      // display: inline-block;
+      color: #1DA1F2;
+      padding: 8px;
+      font-size: 48px;
+      height: 50px;
+      width: 50px;
+      display: inline-block;
     }
   }
 @include pc() {
